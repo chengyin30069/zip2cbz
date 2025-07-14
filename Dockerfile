@@ -1,0 +1,13 @@
+FROM bash:5
+
+WORKDIR /zip2cbz
+
+COPY zip2cbz.sh .
+
+COPY *.zip .
+
+RUN chmod +x zip2cbz.sh
+
+RUN sed -i 's/\r$//' zip2cbz.sh
+
+CMD ["bash", "zip2cbz.sh"]
