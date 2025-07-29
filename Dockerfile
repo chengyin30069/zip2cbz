@@ -1,4 +1,4 @@
-FROM bash:5
+FROM bash:latest
 
 WORKDIR /zip2cbz
 
